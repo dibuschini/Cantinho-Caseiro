@@ -1,0 +1,456 @@
+﻿@{
+    ViewBag.Title = "FAQs";
+    ViewBag.pTitle = "Cardápio";
+    ViewBag.pageTitle = "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-xl-12">
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="card-title">Segunda à Sábado</h4>
+            <p class="card-title-desc">
+                O cardápio do Cantinho caseiro na palma da sua mão para facilitar seu dia a dia e fazer seus pedidos.
+            </p>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#home" role="tab">
+                        <span class="d-block d-sm-none">S</span>
+                        <span class="d-none d-sm-block">Segunda</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#profile" role="tab">
+                        <span class="d-block d-sm-none">T</i></span>
+                        <span class="d-none d-sm-block">Terça</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#messages" role="tab">
+                        <span class="d-block d-sm-none">Q</span>
+                        <span class="d-none d-sm-block">Quarta</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#settings" role="tab">
+                        <span class="d-block d-sm-none">Q</span>
+                        <span class="d-none d-sm-block">Quinta</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#sexta" role="tab">
+                        <span class="d-block d-sm-none">S</span>
+                        <span class="d-none d-sm-block">Sexta</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#sabado" role="tab">
+                        <span class="d-block d-sm-none">S</span>
+                        <span class="d-none d-sm-block">Sábado</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content p-3 text-muted">
+                <div class="tab-pane active" id="home" role="tabpanel">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <div class="avatar-sm product-ribbon">
+
+                                            </div>
+                                            <img src="~/assets/images/product/bife.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Bife acebolado </a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$20,00</del></span> <b>R$18,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/frango.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Frango grelhado</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/peixe.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Peixe</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <div class="avatar-sm product-ribbon">
+
+                                            </div>
+                                            <img src="~/assets/images/product/parmegiana.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Parmegiana Carne/Frango </a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$20,00</del></span> <b>R$18,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/frango.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Frango Empanado</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="messages" role="tabpanel">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <div class="avatar-sm product-ribbon">
+
+                                            </div>
+                                            <img src="~/assets/images/product/feijoada.jpeg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Feijoada </a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$20,00</del></span> <b>R$18,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/frango.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Frango Empanado</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="settings" role="tabpanel">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <div class="avatar-sm product-ribbon">
+
+                                            </div>
+                                            <img src="~/assets/images/product/parmegiana.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Parmegiana Carne/Frango </a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$20,00</del></span> <b>R$18,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/bife.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Frango Empanado</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="sexta" role="tabpanel">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <div class="avatar-sm product-ribbon">
+
+                                            </div>
+                                            <img src="~/assets/images/product/costela.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Costela </a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$20,00</del></span> <b>R$18,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/peixe.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Peixe frito</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/picadinho.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Picadinho</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="sabado" role="tabpanel">
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <div class="avatar-sm product-ribbon">
+
+                                            </div>
+                                            <img src="~/assets/images/product/feijoada.jpeg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Feijoada </a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$23,00</del></span> <b>R$20,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/bife.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Bife acebolado</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="product-img position-relative">
+                                            <img src="~/assets/images/product/frango empanado.jpg" alt="" class="img-fluid mx-auto d-block">
+                                        </div>
+                                        <div class="mt-4 text-center">
+                                            <h5 class="mb-3 text-truncate"><a href="javascript: void(0);" class="text-dark">Filé de frango empanado</a></h5>
+
+                                            <p class="text-muted">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star"></i>
+                                            </p>
+                                            <h5 class="my-0"><span class="text-muted me-2"><del>R$18,00</del></span> <b>R$16,00</b></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end row -->
+@section scripts{
+    <script src="/assets/js/app.js"></script>
+}
+
+

@@ -1,0 +1,51 @@
+﻿<!-- ========== Left Sidebar Start ========== -->
+<div class="vertical-menu">
+
+    <div data-simplebar class="h-100">
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+                <li class="menu-title" key="t-menu">Menu</li>
+<li>
+                    <a href=@Url.Action("", "Home") class="waves-effect">
+                        <i class="bx bx-home"></i>
+                        <span key="t-dashboards">Início</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href=@Url.Action("Cardapio", "home") class="waves-effect">
+                        <i class="bx bx-food-menu"></i>
+                        <span key="t-dashboards">Cardápio</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href=@Url.Action("Index", "LayoutsLightSidebar") class="waves-effect">
+                        <i class="bx bx-user-voice"></i>
+                        <span key="t-layouts">Reservas</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href=@Url.Action("Pedido", "Pedidos") class="waves-effect">
+                        <i class="bx bxs-spreadsheet"></i>
+                        <span key="t-layouts">Pedidos</span>
+                    </a>
+
+                </li>
+                 <li>
+                    <a href=@Url.Action("Relacao", "Pedidos") class="waves-effect">
+                        <i class="bx bx-receipt"></i>
+                        <span key="t-layouts">Relação de Pedidos</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <!-- Sidebar -->
+    </div>
+</div>
+<!-- Left Sidebar End -->

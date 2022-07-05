@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Cantinho_Caseiro.Models.PedidosLocais>
+
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Cadastro</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Prato
+        </th>
+        <th>
+            Quantidade
+        <th>
+            Bebida
+        </th>
+
+        <th>
+            Quantidade
+        </th>
+       
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PdcPrato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PdcQuantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsrSenha)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.UsrTel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsrRua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsrNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsrBairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsrCidade)
+            </td>
+
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

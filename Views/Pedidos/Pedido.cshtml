@@ -1,0 +1,128 @@
+﻿@model Cantinho_Caseiro.Models.PedidosLocais
+@{
+    ViewBag.Title = "Pedidos";
+    ViewBag.pTitle = "Pedidos";
+    ViewBag.pageTitle = "Pedidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-4">Pedidos</h4>
+
+                <form class="needs-validation" method="post" novalidate action=@Url.Action("Criar_Pedido", "Pedidos")>
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="mb-3">
+                                <label for="formrow-inputState" class="form-label">Segunda</label>
+                                <select id="formrow-inputState" name="PdcPrato" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Bife Acebolado</option>
+                                    <option>File de Frango</option>
+                                    <option>Peixe</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="mb-3">
+                                <label for="formrow-inputState" class="form-label">Terça</label>
+                                <select id="formrow-inputState" name="PdcPrato" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Omelete</option>
+                                    <option>Cupim assado</option>
+                                    <option>Carne de panela</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="mb-3">
+                                <label for="formrow-inputState" class="form-label">Quarta</label>
+                                <select id="formrow-inputState" name="PdcPrato" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Feijoada</option>
+                                    <option>File de Frango</option>
+                                    <option>Costelinha</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="mb-3">
+                                <label for="formrow-inputState" class="form-label">Quinta</label>
+                                <select id="formrow-inputState" name="PdcPrato" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Parmegiana carne</option>
+                                    <option>Parmegiana Frango</option>
+                                    <option>Bife</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="mb-3">
+                                <label for="formrow-inputState" class="form-label">Sexta</label>
+                                <select id="formrow-inputState" name="PdcPrato" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Costela</option>
+                                    <option>Peixa</option>
+                                    <option>Picadinho</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="mb-3">
+                                <label for="formrow-inputState" class="form-label">Sábado</label>
+                                <select id="formrow-inputState" name="PdcPrato" class="form-select">
+                                    <option selected>...</option>
+                                    <option>Bife Acebolado</option>
+                                    <option>File de Frango Empanado</option>
+                                    <option>Feijoada</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                       
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="formrow-email-input" class="form-label">Quantidade</label>
+                                    <input type="number" class="form-control" id="formrow-email-input" name="PdcQuantidade">
+                                </div>
+                            </div>
+                         
+                      
+
+                        
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label for="formrow-inputCity" class="form-label">Bebida</label>
+                                    <input type="text" class="form-control" id="formrow-inputCity" name="PdcAdcional">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="formrow-email-input" class="form-label">Quantidade</label>
+                                    <input type="number" class="form-control" id="formrow-email-input" name="PdcCliente">
+                                </div>
+                            </div>
+
+                           
+                     
+                        <div>
+                            <button type="submit" class="btn btn-primary w-md">Confirmar</button>
+                        </div>
+                </form>
+            </div>
+            <!-- end card body -->
+        </div>
+        <!-- end card -->
+    </div>
+    <!-- end col -->
+
+   
+    <!-- end col -->
+</div>
+<!-- end row -->
+@section scripts{
+    <script src="~/assets/js/app.js"></script>
+}
