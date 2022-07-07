@@ -1,0 +1,66 @@
+﻿@model Cantinho_Caseiro.Models.PedidosLocais
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>PedidosLocais</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcPrato)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcPrato)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcQuantidade)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcQuantidade)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcData)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcData)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcAdcional)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcAdcional)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

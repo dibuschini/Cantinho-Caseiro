@@ -27,5 +27,6 @@ namespace Cantinho_Caseiro.Models
     
         public virtual DbSet<PedidosLocais> PedidosLocais { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<Reserva> ReservaSet { get; set; }
     }
 }

@@ -1,0 +1,72 @@
+﻿@model Cantinho_Caseiro.Models.PedidosLocais
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>PedidosLocais</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcPrato)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcPrato)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcQuantidade)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcQuantidade)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcData)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcData)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PdcAdcional)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PdcAdcional)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

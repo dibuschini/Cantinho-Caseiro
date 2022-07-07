@@ -6,70 +6,76 @@
 
 <h2>Cadastro</h2>
 
+<div class="col-xl-12">
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Email
+                    <th>
+                        Senha
+                    </th>
 
-<table class="table">
-    <tr>
-        <th>
-            Nome
-        </th>
-        <th>
-           Email
-        <th>
-            Senha
-        </th>
-       
-        <th>
-            Telefone
-        </th>
-        <th>
-            Rua
-        </th>
-        <th>
-            Nº
-        </th>
-        <th>
-            Bairro
-        </th>
-        <th>
-            Cidade
-        </th>
-       
-        <th></th>
-    </tr>
+                    <th>
+                        Telefone
+                    </th>
+                    <th>
+                        Rua
+                    </th>
+                    <th>
+                        Nº
+                    </th>
+                    <th>
+                        Bairro
+                    </th>
+                    <th>
+                        Cidade
+                    </th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrNome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrSenha)
-        </td>
-       
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrTel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrRua)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrNum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrBairro)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UsrCidade)
-        </td>
-      
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+                    <th>#</th>
+                </tr>
 
-</table>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrNome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrEmail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrSenha)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrTel)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrRua)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrNum)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrBairro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UsrCidade)
+                        </td>
+
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

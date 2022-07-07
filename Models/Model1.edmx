@@ -4,40 +4,49 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CantinhoCaseiroModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="PedidosLocais">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PdcPrato" Type="varchar" MaxLength="50" />
-          <Property Name="PdcQuantidade" Type="varchar" MaxLength="50" />
-          <Property Name="PdcCliente" Type="varchar" MaxLength="50" />
-          <Property Name="PdcData" Type="datetime" />
-          <Property Name="PdcAdcional" Type="varchar" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="Usuarios">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UsrNome" Type="varchar" MaxLength="50" />
-          <Property Name="UsrEmail" Type="varchar" MaxLength="50" />
-          <Property Name="UsrSenha" Type="varchar" MaxLength="50" />
-          <Property Name="UsrPerfil" Type="varchar" MaxLength="50" />
-          <Property Name="UsrTel" Type="nvarchar" MaxLength="50" />
-          <Property Name="UsrRua" Type="varchar" MaxLength="50" />
-          <Property Name="UsrNum" Type="varchar" MaxLength="50" />
-          <Property Name="UsrBairro" Type="varchar" MaxLength="50" />
-          <Property Name="UsrCidade" Type="varchar" MaxLength="50" />
-          <Property Name="UsrData" Type="datetime" />
-        </EntityType>
-        <EntityContainer Name="CantinhoCaseiroModelStoreContainer">
-          <EntitySet Name="PedidosLocais" EntityType="Self.PedidosLocais" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="CantinhoCaseiroModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CantinhoCaseiroModelStoreContainer">
+    <EntitySet Name="PedidosLocais" EntityType="CantinhoCaseiroModel.Store.PedidosLocais" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="CantinhoCaseiroModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReservaSet" EntityType="CantinhoCaseiroModel.Store.ReservaSet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="PedidosLocais">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PdcPrato" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="PdcQuantidade" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="PdcCliente" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="PdcData" Type="datetime" Nullable="true" />
+    <Property Name="PdcAdcional" Type="varchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UsrNome" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrEmail" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrSenha" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrPerfil" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrTel" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrRua" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrNum" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrBairro" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrCidade" Type="varchar" Nullable="true" MaxLength="50" />
+    <Property Name="UsrData" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ReservaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mesa" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="reservada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="data" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CantinhoCaseiroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -71,45 +80,64 @@
         <EntityContainer Name="CantinhoCaseiroEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="PedidosLocais" EntityType="Self.PedidosLocais" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <EntitySet Name="ReservaSet" EntityType="CantinhoCaseiroModel.Reserva" />
         </EntityContainer>
+        <EntityType Name="Reserva">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mesa" Type="String" Nullable="false" />
+          <Property Name="reservada" Type="String" Nullable="false" />
+          <Property Name="data" Type="DateTime" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CantinhoCaseiroModelStoreContainer" CdmEntityContainer="CantinhoCaseiroEntities1">
-          <EntitySetMapping Name="PedidosLocais">
-            <EntityTypeMapping TypeName="CantinhoCaseiroModel.PedidosLocais">
-              <MappingFragment StoreEntitySet="PedidosLocais">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="PdcPrato" ColumnName="PdcPrato" />
-                <ScalarProperty Name="PdcQuantidade" ColumnName="PdcQuantidade" />
-                <ScalarProperty Name="PdcCliente" ColumnName="PdcCliente" />
-                <ScalarProperty Name="PdcData" ColumnName="PdcData" />
-                <ScalarProperty Name="PdcAdcional" ColumnName="PdcAdcional" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Usuarios">
-            <EntityTypeMapping TypeName="CantinhoCaseiroModel.Usuarios">
-              <MappingFragment StoreEntitySet="Usuarios">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="UsrNome" ColumnName="UsrNome" />
-                <ScalarProperty Name="UsrEmail" ColumnName="UsrEmail" />
-                <ScalarProperty Name="UsrSenha" ColumnName="UsrSenha" />
-                <ScalarProperty Name="UsrPerfil" ColumnName="UsrPerfil" />
-                <ScalarProperty Name="UsrTel" ColumnName="UsrTel" />
-                <ScalarProperty Name="UsrRua" ColumnName="UsrRua" />
-                <ScalarProperty Name="UsrNum" ColumnName="UsrNum" />
-                <ScalarProperty Name="UsrBairro" ColumnName="UsrBairro" />
-                <ScalarProperty Name="UsrCidade" ColumnName="UsrCidade" />
-                <ScalarProperty Name="UsrData" ColumnName="UsrData" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CantinhoCaseiroModelStoreContainer" CdmEntityContainer="CantinhoCaseiroEntities1">
+    <EntitySetMapping Name="PedidosLocais">
+      <EntityTypeMapping TypeName="IsTypeOf(CantinhoCaseiroModel.PedidosLocais)">
+        <MappingFragment StoreEntitySet="PedidosLocais">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PdcPrato" ColumnName="PdcPrato" />
+          <ScalarProperty Name="PdcQuantidade" ColumnName="PdcQuantidade" />
+          <ScalarProperty Name="PdcCliente" ColumnName="PdcCliente" />
+          <ScalarProperty Name="PdcData" ColumnName="PdcData" />
+          <ScalarProperty Name="PdcAdcional" ColumnName="PdcAdcional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(CantinhoCaseiroModel.Usuarios)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UsrNome" ColumnName="UsrNome" />
+          <ScalarProperty Name="UsrEmail" ColumnName="UsrEmail" />
+          <ScalarProperty Name="UsrSenha" ColumnName="UsrSenha" />
+          <ScalarProperty Name="UsrPerfil" ColumnName="UsrPerfil" />
+          <ScalarProperty Name="UsrTel" ColumnName="UsrTel" />
+          <ScalarProperty Name="UsrRua" ColumnName="UsrRua" />
+          <ScalarProperty Name="UsrNum" ColumnName="UsrNum" />
+          <ScalarProperty Name="UsrBairro" ColumnName="UsrBairro" />
+          <ScalarProperty Name="UsrCidade" ColumnName="UsrCidade" />
+          <ScalarProperty Name="UsrData" ColumnName="UsrData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReservaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(CantinhoCaseiroModel.Reserva)">
+        <MappingFragment StoreEntitySet="ReservaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="mesa" ColumnName="mesa" />
+          <ScalarProperty Name="reservada" ColumnName="reservada" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -123,7 +151,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
